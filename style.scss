@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+header {
+  .local {
+    position: static;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 50px;
+    padding: 25px 35px;
+    text-shadow: 0 0 5px darkgray;
+    background: linear-gradient(90deg, #b2aee0 0.08%, #161355 100%);
+    color: white;
+    font-weight: bold;
+    transition: .4s ease-in-out;
+
+    .btn {
+      padding: 5px 10px;
+      margin: 0 5px;
+      background-color: blue;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 2px;
+      transition: .3s ease-in-out;
+    }
+
+    .btn:hover {
+      color: blue;
+      background-color: white;
+    }
+
+    .btn.invert {
+      background-color: white;
+      color: blue;
+      transition: .3s ease-in-out;
+    }
+
+    .btn.invert:hover {
+      background-color: rgb(235, 82, 141);
+      color: white;
+    }
+
+    .text {
+
+      .geolocation {
+        color: black;
+        font-weight: bold;
+        text-shadow: 0 0 5px white, 0 0 8px white;
+      }
+    }
+  }
+
+  .local.fechar {
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e4e4;  
+
+  p {
+    margin: 7px 15px;  
+    max-width: 1200px;
+  }
+
+  img {
+    width: 500px;
+    margin: 25px 0;
+  }
+}
