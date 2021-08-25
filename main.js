@@ -27,6 +27,7 @@ function showPosition() {
   fetch('https://ipapi.co/json/')
   .then(function(response) {
     response.json().then(jsonData => {
+      textoP.innerText = 'Identificamos que você está em '
       local.innerText = jsonData.city + ' - ' + jsonData.region_code
     });
   })
@@ -72,6 +73,7 @@ function buscaCEP() {
             cep.classList.remove('erro')
           }, 1700)
         } else {
+        textoP.innerText = 'Identificamos que você está em '
         local.innerText = jsonData.localidade + ' - ' + jsonData.uf
         modal.classList.remove('active')
         cep.value = ''
