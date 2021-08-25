@@ -12,6 +12,9 @@ html {
 }
 
 header {
+  cursor: default;
+  user-select: none;
+
   .local {
     position: static;
     display: flex;

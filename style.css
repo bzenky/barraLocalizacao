@@ -10,6 +10,10 @@ html {
   position: relative;
 }
 
+header {
+  cursor: default;
+  user-select: none;
+}
 header .local {
   position: static;
   display: flex;
