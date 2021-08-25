@@ -7,6 +7,8 @@ const fechar = document.querySelector('#fechar')
 const cep = document.querySelector('.cep')
 const buscar = document.querySelector('#buscar')
 const geo = document.querySelector('#geo')
+const textoP = document.querySelector('.textoP')
+let cont = 0
 
 //Pedido de Geolocalização
 function askLocation() {
@@ -22,28 +24,35 @@ askLocation()
 
 // Geolocalização caso aceite de askLocation
 function showPosition() {
-fetch('https://ipapi.co/json/')
-.then(function(response) {
-  response.json().then(jsonData => {
-    local.innerText = jsonData.city + ' - ' + jsonData.region_code
+  fetch('https://ipapi.co/json/')
+  .then(function(response) {
+    response.json().then(jsonData => {
+      local.innerText = jsonData.city + ' - ' + jsonData.region_code
+    });
+  })
+  .catch(function(error) {
+    alert('Erro!')
   });
-})
-.catch(function(error) {
-  alert('Erro!')
-});
-}
+  cont++
+  }
 
-function showError() {
-  alterar.click()
-}
+  function showError() {
+    alterar.click()
+  }
 
-// Botão Alterar - Modal
+// Botão Alterar/Fechar - Modal
 alterar.addEventListener('click', () => {
   modal.classList.add('active')
 })
 
 fechar.addEventListener('click', () => {
+  if (cont < 1) {
+    textoP.innerText = 'Por favor insira o CEP ou permita a localização'
+    local.innerText = ''
+    modal.classList.remove('active')
+  } else {
   modal.classList.remove('active')
+  }
 })
 
 // API CEP
@@ -66,6 +75,7 @@ function buscaCEP() {
         local.innerText = jsonData.localidade + ' - ' + jsonData.uf
         modal.classList.remove('active')
         cep.value = ''
+        cont++
         }
       });
     })
@@ -84,15 +94,4 @@ function buscaCEP() {
 }
 buscar.addEventListener('click', buscaCEP)
 
-
-
-
-fetch('https://viacep.com.br/ws/' + cepBusca + '/json/')
-.then(function(response) {
-  response.json().then(jsonData => {
-    local.innerText = jsonData.localidade + ' - ' + jsonData.uf
-  });
-})
-.catch(function(error) {
-  alert('Erro!')
-});
+//
