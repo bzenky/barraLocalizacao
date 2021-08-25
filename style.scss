@@ -20,7 +20,7 @@ header {
     width: 100vw;
     height: 50px;
     text-shadow: 0 0 5px darkgray;
-    background: linear-gradient(90deg, #b2aee0 0.08%, #161355 100%);
+    background: linear-gradient(90deg, #9d96e4 0.5%, #161355 100%);
     color: white;
     font-weight: bold;
     transition: .4s ease-in-out;
@@ -54,7 +54,8 @@ header {
     }
 
     .text {
-
+      font-size: 14px;
+      
       .geolocation {
         color: black;
         font-weight: bold;
@@ -115,6 +116,22 @@ header {
 
     .cep:focus-visible {
       outline: none;
+    }
+
+    #buscar {
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: rgb(49, 13, 13);
+      border: 1px solid #000;
+      color: white;
+      transition: .3s ease-in-out;
+    }
+
+    #buscar:hover {
+      transform: scale(1.04);
+      background-color: white;
+      color: rgb(49, 13, 13);
+      font-weight: bold;
     }
 
     #fechar {

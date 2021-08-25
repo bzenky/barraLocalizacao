@@ -10,7 +10,7 @@ const buscar = document.querySelector('#buscar')
 fetch('https://ipapi.co/json/')
 .then(function(response) {
   response.json().then(jsonData => {
-    local.innerText = jsonData.city
+    local.innerText = jsonData.city + ' - ' + jsonData.region_code
   });
 })
 .catch(function(error) {
@@ -34,7 +34,7 @@ function buscaCEP() {
   fetch('https://viacep.com.br/ws/' + cepBusca + '/json/')
     .then(function(response) {
       response.json().then(jsonData => {
-        local.innerText = jsonData.localidade
+        local.innerText = jsonData.localidade + ' - ' + jsonData.uf
       });
     })
     .catch(function(error) {

@@ -18,7 +18,7 @@ header .local {
   width: 100vw;
   height: 50px;
   text-shadow: 0 0 5px darkgray;
-  background: linear-gradient(90deg, #b2aee0 0.08%, #161355 100%);
+  background: linear-gradient(90deg, #9d96e4 0.5%, #161355 100%);
   color: white;
   font-weight: bold;
   transition: 0.4s ease-in-out;
@@ -46,6 +46,9 @@ header .local .btn.invert {
 header .local .btn.invert:hover {
   background-color: #eb528d;
   color: white;
+}
+header .local .text {
+  font-size: 14px;
 }
 header .local .text .geolocation {
   color: black;
@@ -101,6 +104,20 @@ header .local .text .geolocation {
 }
 .modal .card .cep:focus-visible {
   outline: none;
+}
+.modal .card #buscar {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #310d0d;
+  border: 1px solid #000;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.modal .card #buscar:hover {
+  transform: scale(1.04);
+  background-color: white;
+  color: #310d0d;
+  font-weight: bold;
 }
 .modal .card #fechar {
   position: absolute;
