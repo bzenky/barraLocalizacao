@@ -54,7 +54,7 @@ function buscaCEP() {
   fetch('https://viacep.com.br/ws/' + cepBusca + '/json/')
     .then(function(response) {
       response.json().then(jsonData => {
-        if (jsonData.erro = true) {
+        if (jsonData.erro == true) {
           cep.value = 'Digite um CEP válido !'
           cep.classList.add('erro')
 
