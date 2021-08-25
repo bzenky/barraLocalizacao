@@ -7,17 +7,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
 
+html {
+  position: relative;
+}
+
 header {
   .local {
     position: static;
-    top: 0;
-    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 100vw;
     height: 50px;
-    padding: 25px 35px;
     text-shadow: 0 0 5px darkgray;
     background: linear-gradient(90deg, #b2aee0 0.08%, #161355 100%);
     color: white;
@@ -61,12 +62,6 @@ header {
       }
     }
   }
-
-  .local.fechar {
-    position: absolute;
-    top: -100%;
-    opacity: 0;
-  }
 }
 
 .main {
@@ -85,4 +80,62 @@ header {
     width: 500px;
     margin: 25px 0;
   }
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.637);
+  top: -100%;
+  left: 0;
+  transition: .3s ease-in-out;
+  
+  .card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    width: 400px;
+    height: 360px;
+    top: calc(50% - 360px);
+    left: calc(50% - 200px);
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    background-color: #e7e7e7;
+
+    .cep {
+      text-align: center;
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+      margin: 25px 0;
+    }
+
+    .cep:focus-visible {
+      outline: none;
+    }
+
+    #fechar {
+      position: absolute;
+      top: -20px;
+      right: -15px;
+      background-color: rgb(119, 117, 139);
+      border: 5px solid rgb(27, 27, 27);
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      transition: .5s ease-in-out;
+    }
+
+    #fechar:hover {
+      transform: rotate(270deg);
+    }
+  }
+}
+
+.modal.active {
+  top: 0;
 }

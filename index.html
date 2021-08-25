@@ -16,7 +16,6 @@
         <span>. Para modificar sua localização toque em alterar</span>
       </div>
       <div class="btns">
-        <button id="cont" class="btn">Continuar</button>
         <button id="alterar" class="btn invert">Alterar</button>
       </div>
     </div>
@@ -34,6 +33,16 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam id provident nulla? Nihil, laudantium dicta aut, molestiae impedit, laboriosam consequatur earum hic magnam quo reprehenderit corporis mollitia ducimus optio sapiente.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam id provident nulla? Nihil, laudantium dicta aut, molestiae impedit, laboriosam consequatur earum hic magnam quo reprehenderit corporis mollitia ducimus optio sapiente.
       </p>
+  </div>
+
+  <div class="modal">
+    <div class="card">
+      <span>Em Construção 🚧</span>
+      <label for=""></label>
+      <input type="text" maxlength="8" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="cep" placeholder="Digite o CEP">
+      <button id="buscar">Buscar</button>
+      <button id="fechar">❌</button>
+    </div>
   </div>
   <script src="./main.js"></script>
 </body>
