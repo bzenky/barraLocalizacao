@@ -55,7 +55,7 @@ modal.addEventListener('click', (e) => {
 })
 
 window.addEventListener('keydown', (e) => {
-  if (e.key = 'Escape') {
+  if (e.key == 'Escape') {
     modal.classList.remove('active')
   }
 })
