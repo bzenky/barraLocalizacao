@@ -100,7 +100,7 @@ header .local .text .geolocation {
   border: none;
   background: transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 25px 0 15px;
+  margin: 45px 0 15px;
 }
 .modal .card .cep:focus-visible {
   outline: none;

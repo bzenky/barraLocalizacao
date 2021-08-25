@@ -8,6 +8,7 @@ const cep = document.querySelector('.cep')
 const buscar = document.querySelector('#buscar')
 const geo = document.querySelector('#geo')
 const textoP = document.querySelector('.textoP')
+const card = document.querySelector('.card')
 let cont = 0
 
 //Pedido de Geolocalização
@@ -44,6 +45,19 @@ function showPosition() {
 // Botão Alterar/Fechar - Modal
 alterar.addEventListener('click', () => {
   modal.classList.add('active')
+})
+
+modal.addEventListener('click', (e) => {
+  console.log(e.target.id)
+  if (e.target.id == 'modal') {
+    modal.classList.remove('active')
+  }
+})
+
+window.addEventListener('keydown', (e) => {
+  if (e.key = 'Escape') {
+    modal.classList.remove('active')
+  }
 })
 
 fechar.addEventListener('click', () => {
