@@ -100,10 +100,14 @@ header .local .text .geolocation {
   border: none;
   background: transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 25px 0;
+  margin: 25px 0 15px;
 }
 .modal .card .cep:focus-visible {
   outline: none;
+}
+.modal .card .cep.erro {
+  color: red;
+  font-weight: bold;
 }
 .modal .card #buscar {
   padding: 5px 10px;
@@ -118,6 +122,22 @@ header .local .text .geolocation {
   background-color: white;
   color: #310d0d;
   font-weight: bold;
+}
+.modal .card #geo {
+  padding: 5px 10px;
+  margin-top: 20px;
+  background-color: rgba(49, 13, 13, 0.904);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.modal .card #geo:hover {
+  transform: scale(1.04);
+  background-color: white;
+  color: #310d0d;
+  font-weight: bold;
+  border: 1px solid #000;
 }
 .modal .card #fechar {
   position: absolute;

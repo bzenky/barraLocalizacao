@@ -111,11 +111,16 @@ header {
       border: none;
       background: transparent;
       border-bottom: 1px solid rgb(0, 0, 0, 0.1);
-      margin: 25px 0;
+      margin: 25px 0 15px;
     }
 
     .cep:focus-visible {
       outline: none;
+    }
+
+    .cep.erro {
+      color: red;
+      font-weight: bold;
     }
 
     #buscar {
@@ -132,6 +137,24 @@ header {
       background-color: white;
       color: rgb(49, 13, 13);
       font-weight: bold;
+    }
+
+    #geo {
+      padding: 5px 10px;
+      margin-top: 20px;
+      background-color: rgba(49, 13, 13, 0.904);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: .3s ease-in-out;
+    }
+
+    #geo:hover {
+      transform: scale(1.04);
+      background-color: white;
+      color: rgb(49, 13, 13);
+      font-weight: bold;
+      border: 1px solid #000;
     }
 
     #fechar {
