@@ -1,3 +1,5 @@
 # Barra com Geolocalização
 
-Teste em desenvolvimento para barra com localização com geolocaliação/cep, possui modal para a inserção de CEP, para quem desabilita a opção de localização.
+Teste de barra (header) com geolocaliação automática, com possibilidade de inserir o CEP para alterar a localidade.
+
+![PreviewConverter](https://i.imgur.com/pzkdzmj.png)
